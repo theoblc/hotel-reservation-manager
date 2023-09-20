@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="menuPrincipalView"
+	xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controller.onglets.MenuPrincipalCtrl">
+	<children>
+		<SplitPane AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<items>
+
+				<AnchorPane>
+					<children>
+						<VBox layoutX="10.0" layoutY="8.0"
+							AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+							AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+							<children>
+								<HBox alignment="BOTTOM_LEFT">
+									<children>
+										<Label text="TABLEAU DE BORD">
+											<font>
+												<Font name="System Bold" size="31.0" />
+											</font>
+										</Label>
+										<HBox alignment="CENTER_RIGHT" spacing="50.0"
+											HBox.hgrow="ALWAYS">
+											<children>
+												<Button alignment="CENTER" contentDisplay="CENTER"
+													layoutX="804.0" layoutY="17.0" mnemonicParsing="false"
+													onMouseClicked="#demarrage" text="Rafraîchir" />
+												<Button fx:id="b_disconnect" alignment="CENTER_RIGHT"
+													contentDisplay="BOTTOM" mnemonicParsing="false"
+													onMouseClicked="#disconnect" text="Déconnexion" />
+											</children>
+										</HBox>
+									</children>
+								</HBox>
+								<HBox VBox.vgrow="ALWAYS">
+									<children>
+										<GridPane alignment="CENTER"
+											style="-fx-border-style: solid inside;" HBox.hgrow="ALWAYS">
+											<columnConstraints>
+												<ColumnConstraints hgrow="SOMETIMES"
+													minWidth="383.0" prefWidth="383.0" />
+												<ColumnConstraints hgrow="SOMETIMES"
+													minWidth="383.0" prefWidth="383.0" />
+												<ColumnConstraints hgrow="SOMETIMES"
+													minWidth="383.0" prefWidth="383.0" />
+												<ColumnConstraints hgrow="SOMETIMES"
+													maxWidth="8.0" minWidth="0.0" prefWidth="0.0" />
+											</columnConstraints>
+											<rowConstraints>
+												<RowConstraints minHeight="45.0"
+													prefHeight="45.0" vgrow="SOMETIMES" />
+												<RowConstraints minHeight="100.0"
+													prefHeight="100.0" vgrow="SOMETIMES" />
+												<RowConstraints minHeight="45.0"
+													prefHeight="45.0" vgrow="SOMETIMES" />
+												<RowConstraints minHeight="100.0"
+													prefHeight="100.0" vgrow="SOMETIMES" />
+											</rowConstraints>
+											<children>
+												<GridPane fx:id="etage0" layoutX="21.0"
+													layoutY="97.0">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="45.0" prefWidth="45.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="45.0" prefWidth="45.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="45.0" prefWidth="45.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="45.0" prefWidth="45.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="45.0" prefWidth="45.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="45.0" prefWidth="45.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="45.0" prefWidth="45.0" />
+													</columnConstraints>
+													<rowConstraints>
+														<RowConstraints minHeight="45.0"
+															prefHeight="45.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+												</GridPane>
+												<GridPane fx:id="etage1" layoutX="11.0"
+													layoutY="11.0" GridPane.columnIndex="1">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES"
+															maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															maxWidth="70.0" minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															maxWidth="70.0" minWidth="10.0" prefWidth="100.0" />
+													</columnConstraints>
+													<rowConstraints>
+														<RowConstraints minHeight="10.0"
+															prefHeight="45.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+												</GridPane>
+												<GridPane fx:id="etage2" GridPane.columnIndex="2">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+													</columnConstraints>
+													<rowConstraints>
+														<RowConstraints minHeight="10.0"
+															prefHeight="45.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+												</GridPane>
+												<GridPane fx:id="etage3" GridPane.rowIndex="2">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+													</columnConstraints>
+													<rowConstraints>
+														<RowConstraints minHeight="45.0"
+															prefHeight="45.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+												</GridPane>
+												<GridPane fx:id="etage4" maxHeight="100.0"
+													GridPane.columnIndex="1" GridPane.rowIndex="2">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+													</columnConstraints>
+													<rowConstraints>
+														<RowConstraints minHeight="45.0"
+															prefHeight="45.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+												</GridPane>
+												<GridPane fx:id="etage5" layoutX="11.0"
+													layoutY="127.0" GridPane.columnIndex="2"
+													GridPane.rowIndex="2">
+													<columnConstraints>
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+														<ColumnConstraints hgrow="SOMETIMES"
+															minWidth="10.0" prefWidth="100.0" />
+													</columnConstraints>
+													<rowConstraints>
+														<RowConstraints minHeight="45.0"
+															prefHeight="45.0" vgrow="SOMETIMES" />
+													</rowConstraints>
+												</GridPane>
+												<HBox prefHeight="108.0" prefWidth="383.0"
+													GridPane.rowIndex="1">
+													<children>
+														<AnchorPane minWidth="100.0" prefHeight="118.0"
+															prefWidth="143.0">
+															<children>
+																<ProgressIndicator fx:id="pb_etage0"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	prefHeight="73.0" prefWidth="186.0" progress="0.0"
+																	style="-fx-progress-color: #2BA20E;"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="0.0"
+																	AnchorPane.topAnchor="20.0" />
+															</children>
+														</AnchorPane>
+														<Label fx:id="label_etage0" prefHeight="118.0"
+															prefWidth="385.0" />
+													</children>
+												</HBox>
+												<HBox layoutX="21.0" layoutY="142.0" prefHeight="108.0"
+													prefWidth="383.0" GridPane.columnIndex="1"
+													GridPane.rowIndex="1">
+													<children>
+														<AnchorPane minWidth="100.0" prefHeight="118.0"
+															prefWidth="143.0">
+															<children>
+																<ProgressIndicator fx:id="pb_etage1"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	prefHeight="73.0" prefWidth="186.0" progress="0.0"
+																	style="-fx-progress-color: #2BA20E;"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="0.0"
+																	AnchorPane.topAnchor="20.0" />
+															</children>
+														</AnchorPane>
+														<Label fx:id="label_etage1" prefHeight="118.0"
+															prefWidth="385.0" />
+													</children>
+												</HBox>
+												<HBox layoutX="424.0" layoutY="142.0"
+													prefHeight="108.0" prefWidth="383.0"
+													GridPane.columnIndex="2" GridPane.rowIndex="1">
+													<children>
+														<AnchorPane minWidth="100.0" prefHeight="118.0"
+															prefWidth="143.0">
+															<children>
+																<ProgressIndicator fx:id="pb_etage2"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	prefHeight="73.0" prefWidth="186.0" progress="0.0"
+																	style="-fx-progress-color: #2BA20E;"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="0.0"
+																	AnchorPane.topAnchor="20.0" />
+															</children>
+														</AnchorPane>
+														<Label fx:id="label_etage2" prefHeight="118.0"
+															prefWidth="385.0" />
+													</children>
+												</HBox>
+												<HBox layoutX="827.0" layoutY="142.0"
+													prefHeight="108.0" prefWidth="383.0" GridPane.rowIndex="3">
+													<children>
+														<AnchorPane minWidth="100.0" prefHeight="118.0"
+															prefWidth="143.0">
+															<children>
+																<ProgressIndicator fx:id="pb_etage3"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	prefHeight="73.0" prefWidth="186.0" progress="0.0"
+																	style="-fx-progress-color: #2BA20E;"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="0.0"
+																	AnchorPane.topAnchor="20.0" />
+															</children>
+														</AnchorPane>
+														<Label fx:id="label_etage3" prefHeight="118.0"
+															prefWidth="385.0" />
+													</children>
+												</HBox>
+												<HBox layoutX="21.0" layoutY="322.0" prefHeight="108.0"
+													prefWidth="383.0" GridPane.columnIndex="1"
+													GridPane.rowIndex="3">
+													<children>
+														<AnchorPane minWidth="100.0" prefHeight="118.0"
+															prefWidth="143.0">
+															<children>
+																<ProgressIndicator fx:id="pb_etage4"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	prefHeight="73.0" prefWidth="186.0" progress="0.0"
+																	style="-fx-progress-color: #2BA20E;"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="0.0"
+																	AnchorPane.topAnchor="20.0" />
+															</children>
+														</AnchorPane>
+														<Label fx:id="label_etage4" prefHeight="118.0"
+															prefWidth="385.0" />
+													</children>
+												</HBox>
+												<HBox layoutX="424.0" layoutY="322.0"
+													prefHeight="108.0" prefWidth="383.0"
+													GridPane.columnIndex="2" GridPane.rowIndex="3">
+													<children>
+														<AnchorPane minWidth="100.0" prefHeight="118.0"
+															prefWidth="143.0">
+															<children>
+																<ProgressIndicator fx:id="pb_etage5"
+																	minHeight="-Infinity" minWidth="-Infinity"
+																	prefHeight="73.0" prefWidth="186.0" progress="0.0"
+																	style="-fx-progress-color: #2BA20E;"
+																	AnchorPane.leftAnchor="0.0"
+																	AnchorPane.rightAnchor="0.0"
+																	AnchorPane.topAnchor="20.0" />
+															</children>
+														</AnchorPane>
+														<Label fx:id="label_etage5" prefHeight="118.0"
+															prefWidth="385.0" />
+													</children>
+												</HBox>
+											</children>
+											<padding>
+												<Insets bottom="25.0" left="10.0" top="25.0" />
+											</padding>
+										</GridPane>
+									</children>
+								</HBox>
+								<HBox alignment="CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+									<children>
+										<GridPane alignment="CENTER_RIGHT" layoutX="621.0"
+											layoutY="10.0" style="-fx-alignment: CENTER_RIGHT;"
+											HBox.hgrow="ALWAYS">
+											<columnConstraints>
+												<ColumnConstraints hgrow="SOMETIMES" />
+											</columnConstraints>
+											<rowConstraints>
+												<RowConstraints vgrow="SOMETIMES" />
+												<RowConstraints vgrow="SOMETIMES" />
+											</rowConstraints>
+											<children>
+												<HBox>
+													<children>
+														<Label contentDisplay="CENTER" text="Évènement">
+															<font>
+																<Font name="System Bold" size="31.0" />
+															</font>
+														</Label>
+													</children>
+												</HBox>
+												<TableView fx:id="pri_tab_event"
+													tableMenuButtonVisible="true" GridPane.rowIndex="1" />
+											</children>
+										</GridPane>
+										<GridPane alignment="CENTER_RIGHT" layoutX="10.0"
+											layoutY="10.0" style="-fx-alignment: CENTER_RIGHT;"
+											HBox.hgrow="ALWAYS">
+											<columnConstraints>
+												<ColumnConstraints hgrow="SOMETIMES" />
+											</columnConstraints>
+											<rowConstraints>
+												<RowConstraints vgrow="SOMETIMES" />
+												<RowConstraints vgrow="SOMETIMES" />
+											</rowConstraints>
+											<children>
+												<Label contentDisplay="CENTER" text="Chambres">
+													<font>
+														<Font name="System Bold" size="31.0" />
+													</font>
+												</Label>
+												<TableView fx:id="pri_tab_chambre"
+													tableMenuButtonVisible="true" GridPane.rowIndex="1" />
+											</children>
+										</GridPane>
+									</children>
+									<VBox.margin>
+										<Insets top="10.0" />
+									</VBox.margin>
+								</HBox>
+							</children>
+						</VBox>
+					</children>
+				</AnchorPane>
+
+
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

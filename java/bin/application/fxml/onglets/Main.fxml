@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<TabPane fx:id="tabpane" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<tabs>
+				<Tab closable="false" text="Menu Principal">
+					<content>
+						<fx:include fx:id="menuPrincipalView"
+							source="MenuPrincipalView.fxml" />
+					</content>
+				</Tab>
+				<Tab closable="false" text="Réservations">
+					<content>
+						<fx:include fx:id="reservationView"
+							source="ReservationView.fxml" />
+					</content>
+				</Tab>
+				<Tab closable="false" text="Clients">
+					<content>
+						<fx:include fx:id="clientView" source="ClientView.fxml" />
+					</content>
+				</Tab>
+				<Tab closable="false" text="Administrateur">
+					<content>
+						<fx:include fx:id="administrateurView"
+							source="AdministrateurView.fxml" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>

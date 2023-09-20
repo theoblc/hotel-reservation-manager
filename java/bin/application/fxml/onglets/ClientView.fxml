@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="clientView"
+	xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controller.onglets.ClientCtrl">
+	<children>
+		<SplitPane AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<items>
+
+				<AnchorPane id="Ajouter">
+					<children>
+						<BorderPane AnchorPane.bottomAnchor="10.0"
+							AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+							AnchorPane.topAnchor="10.0">
+							<top>
+								<HBox>
+									<children>
+										<Label alignment="TOP_LEFT" contentDisplay="CENTER"
+											text="Gestion Clients">
+											<font>
+												<Font name="System Bold" size="31.0" />
+											</font>
+										</Label>
+										<HBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+											<children>
+												<Button fx:id="cli_b_liste" alignment="CENTER_RIGHT"
+													mnemonicParsing="false" onMouseClicked="#listeClient"
+													text="Rafraîchir" />
+											</children>
+										</HBox>
+									</children>
+									<BorderPane.margin>
+										<Insets bottom="10.0" left="10.0" right="10.0"
+											top="10.0" />
+									</BorderPane.margin>
+									<padding>
+										<Insets left="200.0" />
+									</padding>
+								</HBox>
+							</top>
+							<left>
+								<VBox spacing="138.0">
+									<children>
+										<VBox spacing="20.0">
+											<children>
+												<Button fx:id="cli_b_ajout" mnemonicParsing="false"
+													onMouseClicked="#ajoutClient" prefHeight="90.0"
+													prefWidth="190.0" text="Ajouter" />
+												<Button fx:id="cli_b_modif" mnemonicParsing="false"
+													onMouseClicked="#modifClient" prefHeight="90.0"
+													prefWidth="190.0" text="Modifier" />
+												<Button fx:id="cli_b_supp" mnemonicParsing="false"
+													onMouseClicked="#supprClient" prefHeight="90.0"
+													prefWidth="190.0" text="Supprimer" />
+											</children>
+										</VBox>
+										<VBox alignment="CENTER" spacing="20.0">
+											<children>
+												<HBox alignment="CENTER">
+													<children>
+														<Label text="Rechercher">
+															<font>
+																<Font name="System Bold" size="31.0" />
+															</font>
+														</Label>
+													</children>
+												</HBox>
+												<TextField fx:id="cli_text_prenom"
+													promptText="Prénom du client" />
+												<TextField fx:id="cli_text_nom"
+													promptText="Nom du client" />
+												<HBox alignment="CENTER">
+													<children>
+														<Button fx:id="cli_b_valider"
+															mnemonicParsing="false" onMouseClicked="#rechercheClient"
+															text="Valider" />
+													</children>
+												</HBox>
+											</children>
+										</VBox>
+									</children>
+									<BorderPane.margin>
+										<Insets bottom="10.0" left="10.0" right="10.0" />
+									</BorderPane.margin>
+								</VBox>
+							</left>
+							<center>
+								<HBox alignment="CENTER" BorderPane.alignment="CENTER">
+									<children>
+										<TableView fx:id="cli_tab" HBox.hgrow="ALWAYS" />
+									</children>
+								</HBox>
+							</center>
+						</BorderPane>
+
+					</children>
+				</AnchorPane>
+
+
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

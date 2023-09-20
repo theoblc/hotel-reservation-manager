@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.sousOnglets.AdministrateurAjoutEmpCtrl">
+   <children>
+      <GridPane fx:id="grille" alignment="CENTER" hgap="20.0" layoutX="25.0" layoutY="25.0" vgap="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="82.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="175.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelnom" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Nom*" />
+            <Label fx:id="labelprenom" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Prénom*" GridPane.rowIndex="1" />
+            <Label fx:id="labeladmin" alignment="CENTER" layoutX="10.0" layoutY="142.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Administrateur*" GridPane.rowIndex="2" />
+            <Label fx:id="labelrole" alignment="CENTER" layoutX="10.0" layoutY="274.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Rôle*" GridPane.rowIndex="3" />
+            <Label fx:id="labeltel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Tel" GridPane.rowIndex="4" />
+            <Label fx:id="labelmail" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Mail" GridPane.rowIndex="5" />
+            <Label fx:id="labelpassword" alignment="CENTER" layoutX="10.0" layoutY="210.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Mot de passe*" GridPane.rowIndex="6" />
+            <Label fx:id="labelidentifiant" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Login*" GridPane.rowIndex="7" />
+            <TextField fx:id="nom" GridPane.columnIndex="1" />
+            <TextField fx:id="prenom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="admin" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: white; -fx-border-color: grey;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="role" prefHeight="25.0" prefWidth="187.0" promptText="Statut" style="-fx-background-color: white; -fx-border-color: grey;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="tel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="mail" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="identifiant" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <VBox GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="boutonValider" mnemonicParsing="false" onAction="#Valider" text="Valider" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="label_erreur" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

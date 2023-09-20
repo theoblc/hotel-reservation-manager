@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controller.onglets.AuthentificationCtrl">
+	<children>
+		<VBox layoutX="13.0" layoutY="27.0" spacing="10.0"
+			AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
+			AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<GridPane hgap="10.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" />
+						<ColumnConstraints hgrow="SOMETIMES" />
+						<ColumnConstraints hgrow="SOMETIMES" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints maxHeight="73.5" minHeight="10.0"
+							prefHeight="42.0" vgrow="SOMETIMES" />
+						<RowConstraints maxHeight="105.5" minHeight="10.0"
+							prefHeight="42.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<TextField fx:id="id_field" GridPane.columnIndex="1" />
+						<PasswordField fx:id="password_field"
+							onKeyPressed="#onEnter" GridPane.columnIndex="1"
+							GridPane.rowIndex="1" />
+						<Label alignment="CENTER" prefHeight="92.0"
+							prefWidth="100.0" text="Identifiant :" />
+						<Label alignment="CENTER" prefHeight="89.0"
+							prefWidth="100.0" text="Mot de passe :" GridPane.rowIndex="1" />
+						<TextField fx:id="unmask_field" onKeyPressed="#onEnter"
+							GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						<CheckBox fx:id="check_pass" mnemonicParsing="false"
+							onAction="#unmask" text="Démasquer" GridPane.columnIndex="2"
+							GridPane.rowIndex="1" />
+					</children>
+				</GridPane>
+				<HBox alignment="CENTER">
+					<children>
+						<Button fx:id="b_connect" mnemonicParsing="false"
+							onKeyPressed="#onEnter" onMouseClicked="#connect"
+							text="Se connecter" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER">
+					<children>
+						<Label fx:id="incorrect" alignment="CENTER"
+							contentDisplay="RIGHT" textFill="RED" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+</AnchorPane>
